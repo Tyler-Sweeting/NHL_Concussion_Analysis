@@ -24,25 +24,63 @@
       />
       <a class="navbar-brand" href="#"> NHL Concussion Analysis </a>
     </nav>
-
-    <p class="p-3 text-justify font-weight-bold text">
-      Concussions are a significant concern in the National Hockey League (NHL),
-      as they can have serious and long-lasting effects on players' health and
-      well-being. The league has implemented various measures to address the
-      issue, including the introduction of a concussion protocol that requires
-      players to undergo a series of tests before being cleared to return to
-      play. Additionally, the NHL has implemented stricter penalties for hits to
-      the head and has increased the use of video review to ensure that
-      dangerous plays are penalized. Despite these efforts, there is still much
-      work to be done to reduce the incidence of concussions in the NHL and to
-      better understand the long-term effects of these injuries on players.
-    </p>
-
-    <h4>
-      In our project we develop a Machine Learning models that predict the
-      impact a concussion will have on a players future performance after the
-      concussion
-    </h4>
+    <!-- Intro Part Start Here -->
+    <div class="m-2 border border-dark rounded d-flex align-items-center">
+      <img
+        src="./static/img/team.jpg"
+        class="rounded float-left img-thumbnail p-2 m-2"
+      />
+      <div>
+        <p class="p-3 text-justify font-weight-bold">
+          Concussions are a significant concern in the National Hockey League
+          (NHL), as they can have serious and long-lasting effects on players'
+          health and well-being. The league has implemented various measures to
+          address the issue, including the introduction of a concussion protocol
+          that requires players to undergo a series of tests before being
+          cleared to return to play. Additionally, the NHL has implemented
+          stricter penalties for hits to the head and has increased the use of
+          video review to ensure that dangerous plays are penalized. Despite
+          these efforts, there is still much work to be done to reduce the
+          incidence of concussions in the NHL and to better understand the
+          long-term effects of these injuries on players.
+        </p>
+        <p class="p-3 text-justify font-weight-bold">
+          In our project we develop a Machine Learning models that predict the
+          impact a concussion will have on a players future performance after
+          the concussion
+        </p>
+      </div>
+    </div>
+    <!-- Intro Part End Here -->
+    <!-- The Analysis Part start Here  -->
+    <div class="analysis">
+      <div class="m-4 d-flex justify-content-center">
+        <input placeholder="input  here" />
+        <input placeholder="input  here" />
+        <input placeholder="input  here" />
+        <input placeholder="input  here" />
+        <button type="button" class="btn btn-secondary">Predict</button>
+      </div>
+      <div class="carts d-flex justify-content-center m-5">
+        <div class="border border-dark m-1 p-1 w-40 h-40">
+          <img src="./static/img/placeholder-600x600.jpg" />
+          <p>Chart 1</p>
+        </div>
+        <div class="border border-dark m-1 p-1 w-40 h-40">
+          <img src="./static/img/placeholder-600x600.jpg" />
+          <p>Chart 2</p>
+        </div>
+        <div class="border border-dark m-1 p-1 w-40 h-40">
+          <img src="./static/img/placeholder-600x600.jpg" />
+          <p>Chart 3</p>
+        </div>
+        <div class="border border-dark m-1 p-1 w-40 h-40">
+          <img src="./static/img/placeholder-600x600.jpg" />
+          <p>Chart 4</p>
+        </div>
+      </div>
+    </div>
+    <!-- The Analysis Part End Here  -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
