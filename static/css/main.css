@@ -1,3 +1,16 @@
 p { 
     font-size: larger;
 }
+
+.inputFilde {
+    padding: 20px;
+    margin: 9.5px;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+
+
+.inputFilde::placeholder {
+    color: black;
+}
