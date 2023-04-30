@@ -23,7 +23,7 @@ ___
 ##### Dependencies 
 * Python 3.9.15
 * Pandas 1.5.22
-* Jupyter 1.0.0
+* 
 * 
 *
 ___
