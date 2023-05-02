@@ -14,7 +14,7 @@
       rel="stylesheet"
       href="{{url_for('static', filename = 'css/main.css')}}"
     />
-    <title>Document</title>
+    <title>NHL Concussion Analysis</title>
   </head>
   <body>
     <nav class="navbar navbar-light bg-light align-items-center">
@@ -27,13 +27,13 @@
       />
       <a class="navbar-brand" href="#"> NHL Concussion Analysis </a>
     </nav>
-    <!-- Intro Part Start Here -->
+   
     <div class="m-2 border border-dark rounded d-flex align-items-center">
       <img
         src="{{url_for('static', filename = 'images/team.jpg')}}"
         class="rounded float-left img-thumbnail p-2 m-2"
       />
-      <div>
+      <div >
         <p class="p-3 text-justify font-weight-bold">
           Concussions are a significant concern in the National Hockey League
           (NHL), as they can have serious and long-lasting effects on players'
@@ -54,15 +54,18 @@
         </p>
       </div>
     </div>
-    <!-- Intro Part End Here -->
-    <!-- The Analysis Part start Here  -->
+  
     <div class="analysis">
-      <div class="m-4 d-flex justify-content-center">
-        <input placeholder="input  here" />
-        <input placeholder="input  here" />
-        <input placeholder="input  here" />
-        <input placeholder="input  here" />
-        <button type="button" class="btn btn-secondary">Predict</button>
+      <div class="">
+        <div class="d-flex align-items-center justify-content-center">
+          <input class="rounded inputFilde" placeholder="Player Name" />
+          <select class="form-select m-2 rounded  inputFilde" id="inputGroupSelect01">
+            <option selected>Concussion Length</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
       </div>
       <div class="carts d-flex justify-content-center m-5">
         <div class="border border-dark m-1 p-1 w-40 h-40">
@@ -91,7 +94,63 @@
         </div>
       </div>
     </div>
-    <!-- The Analysis Part End Here  -->
+ 
+    <div class="d-flex justify-content-center">
+      <div  class="col-md-9">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">First</th>
+              <th scope="col">Last</th>
+              <th scope="col">Handle</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Larry</td>
+              <td>the Bird</td>
+              <td>@twitter</td>
+            </tr>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Larry</td>
+              <td>the Bird</td>
+              <td>@twitter</td>
+            </tr>
+          </tbody>
+        </table>
+        
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
@@ -110,6 +169,6 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
-    <script src="{{url_for('static', filename= 'js/app.js')}}"></script>
+    <script src="{{url_for('static', filename='js/app.js')}}"></script>
   </body>
 </html>
