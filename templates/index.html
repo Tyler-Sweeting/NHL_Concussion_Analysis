@@ -56,17 +56,48 @@
     </div>
   
     <div class="analysis">
-      <div class="">
-        <div class="d-flex align-items-center justify-content-center">
-          <input class="rounded inputFilde" placeholder="Player Name" />
-          <select class="form-select m-2 rounded  inputFilde" id="inputGroupSelect01">
-            <option selected>Concussion Length</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-          </select>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-3">
+            <form class="">
+              <p>Filter Search</p>
+              <ul class="list-group">
+                <li class="list-group-item d-flex flex-column">
+                  <label for="playerName">Player Name</label>
+                  <input type="text" placeholder="Player Name" id="playerName" />
+                </li>
+                <li class="list-group-item d-flex flex-column">
+                  <label for="concussionLength">Concussion Length</label>
+                  <input type="text" placeholder="Concussion Length" id="concussionLength" />
+                </li>
+                <li class="list-group-item d-flex flex-column">
+                  <button>predict</button>
+                </li>
+              </ul>
+            </form>
+          </div>
+  
+          <!-- Table -->
+          <div class="col-md-9">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Season</th>
+                  <th>Player Name</th>
+                  <th>Position</th>
+                  <th>i_f_goals</th>
+                  <th>i_f_points</th>
+                  <th>i_f_penalityminutes</th>
+                  <th>i_f_hits</th>
+                  <th>i_f_takeaways</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
         </div>
-      </div>
+    </div>
+    <hr>
       <div class="carts d-flex justify-content-center m-5">
         <div class="border border-dark m-1 p-1 w-40 h-40">
           <img
@@ -94,61 +125,6 @@
         </div>
       </div>
     </div>
- 
-    <div class="d-flex justify-content-center">
-      <div  class="col-md-9">
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">First</th>
-              <th scope="col">Last</th>
-              <th scope="col">Handle</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Larry</td>
-              <td>the Bird</td>
-              <td>@twitter</td>
-            </tr>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Larry</td>
-              <td>the Bird</td>
-              <td>@twitter</td>
-            </tr>
-          </tbody>
-        </table>
-        
-      </div>
-    </div>
-  </div>
 </div>
     </div>
 
@@ -169,6 +145,8 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+    <script src="{{url_for('static', filename='js/data.js')}}"></script>
+    <script src="{{url_for('static', filename='js/table.js')}}"></script>
     <script src="{{url_for('static', filename='js/app.js')}}"></script>
   </body>
 </html>
