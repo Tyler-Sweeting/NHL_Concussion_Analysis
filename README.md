@@ -35,6 +35,15 @@ ___
 ![NHL_Concussion_ERD](https://user-images.githubusercontent.com/118485409/235812652-f1d46e21-f319-4a32-a9ee-493e5f0d869e.png)
 
 ##### SQL
+
+* SQL Join Code
+
+![SQL_join](https://user-images.githubusercontent.com/118485409/235814811-425c19e7-ba6a-47bd-a5ee-e9ba82b2c23a.png)
+
+* SQL Output 
+
+![SQL_output](https://user-images.githubusercontent.com/118485409/235814821-2d349348-a14f-40c2-b1b9-92a9ac901196.png)
+
 ##### Tableau
 ##### Website
 
