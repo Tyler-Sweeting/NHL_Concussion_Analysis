@@ -63,24 +63,29 @@
               <p>Filter Search</p>
               <ul class="list-group">
                 <li class="list-group-item d-flex flex-column">
-                  <label for="playerName">Player Name</label>
-                  <input type="text" placeholder="Player Name" id="playerName" />
+                  <label for="name">Player Name</label>
+                  <input type="text" placeholder="Player Name" id="name" />
                 </li>
                 <li class="list-group-item d-flex flex-column">
                   <label for="season">Season</label>
                   <input type="text" placeholder="Season" id="season" /> 
                 </li>
                 <li class="list-group-item d-flex flex-column">
-                  <label for="concussionLength">Concussion Length</label>
-              <input type="text" placeholder="Concussion Length" id="concussionLength" />  
-                </li> 
+                  <label for="team">Team</label>
+                  <input type="text" placeholder="Team" id="team" /> 
+                </li>
+                <!-- 
+                  <li class="list-group-item d-flex flex-column">
+                    <label for="concussionLength">Concussion Length</label>
+                <input type="text" placeholder="Concussion Length" id="concussionLength" />  
+                  </li> 
+                -->
 
               </ul>
             </form>
           </div>
-  
           <!-- Table -->
-          <div data-bs-spy="scroll" class="col-md-9 ">
+          <div class="col-md-9 container-fluid overflow-auto">
             <table class="table table-striped">
               <thead>
                 <tr>
