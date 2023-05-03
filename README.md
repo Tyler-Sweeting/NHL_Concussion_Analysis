@@ -31,6 +31,9 @@ ___
 ### Summary
 
 ##### ERD
+
+![NHL_Concussion_ERD](https://user-images.githubusercontent.com/118485409/235812652-f1d46e21-f319-4a32-a9ee-493e5f0d869e.png)
+
 ##### SQL
 ##### Tableau
 ##### Website
