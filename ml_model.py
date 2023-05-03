@@ -56,6 +56,15 @@ def save_model_object(model_object, model_name, model_params):
         except:
             print("ERROR")
     print(file_name, " saved successfully")
+    
+    
+    
+    
+    # Save file
+save_path = path_file / "ml_model"/ 'feature_hs.csv'
+# final_data.to_csv(save_path, index = None, header=True)
+# print ("Features file saved 100%")
+
 
  # ***************************************************************************************
 # MACHINE LEARNING ALGORITHM IMPLEMENTATION
