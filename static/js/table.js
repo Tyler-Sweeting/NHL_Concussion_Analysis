@@ -70,3 +70,4 @@ d3.selectAll("input").on("change", updateFilters);
 
 // Build the table when the page loads
 buildTable(tableData);
+
