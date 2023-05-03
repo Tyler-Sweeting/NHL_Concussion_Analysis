@@ -14,3 +14,8 @@ p {
 .inputFilde::placeholder {
     color: black;
 }
+
+.scroll {
+    height: 360px;
+    overflow:auto;
+}
