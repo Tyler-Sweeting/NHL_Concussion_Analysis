@@ -68,7 +68,7 @@
                 </li>
                 <li class="list-group-item d-flex flex-column">
                   <label for="season">Season</label>
-                  <input type="text" placeholder="Season" id="season" /> 
+                  <input type="text" placeholder="Season" id="season" />
                 </li>
                 <li class="list-group-item d-flex flex-column">
                   <label for="team">Team</label>
@@ -113,32 +113,18 @@
         </div>
     </div>
     <hr>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well">
+          <h5>Charts</h5>
+          <div id="chart"></div>
+  </div>
+
+  
       <div class="carts d-flex justify-content-center m-5">
-        <div class="border border-dark m-1 p-1 w-40 h-40">
-          <img
-            src="{{url_for('static',filename ='images/placeholder-600x600.jpg')}}"
-          />
-          <p>Chart 1</p>
-        </div>
-        <div class="border border-dark m-1 p-1 w-40 h-40">
-          <img
-            src="{{url_for('static',filename ='images/placeholder-600x600.jpg')}}"
-          />
-          <p>Chart 2</p>
-        </div>
-        <div class="border border-dark m-1 p-1 w-40 h-40">
-          <img
-            src="{{url_for('static',filename ='images/placeholder-600x600.jpg')}}"
-          />
-          <p>Chart 3</p>
-        </div>
-        <div class="border border-dark m-1 p-1 w-40 h-40">
-          <img
-            src="{{url_for('static',filename ='images/placeholder-600x600.jpg')}}"
-          />
-          <p>Chart 4</p>
-        </div>
+        <div id="d3-container"/>
       </div>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script
@@ -160,6 +146,7 @@
     
     <script src="{{url_for('static', filename='js/data.js')}}"></script>
     <script src="{{url_for('static', filename='js/table.js')}}"></script>
+    <script src="{{url_for('static', filename='js/chart.js')}}"></script>
     <script src="{{url_for('static', filename='js/app.js')}}"></script>
   </body>
 </html>
