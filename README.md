@@ -51,12 +51,14 @@ Joined all of the skater data from each season onto one dataset, using 'name' as
 * SQL Output 
 
 ![SQL_output](https://user-images.githubusercontent.com/118485409/235814821-2d349348-a14f-40c2-b1b9-92a9ac901196.png)
+
 The final visual of our joined dataset.
 
 ##### Data Exploration
 
 
 ##### Machine Learning
+
 
 ##### Tableau
 

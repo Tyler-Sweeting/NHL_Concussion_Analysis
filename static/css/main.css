@@ -14,3 +14,19 @@ p {
 .inputFilde::placeholder {
     color: black;
 }
+
+.scroll {
+    height: 360px;
+    overflow:auto;
+}
+
+.textLink {
+    font-size: 50px;
+    color: white;
+    direction: none;
+}
+
+.textLink:hover{
+    color: white ;
+}
+

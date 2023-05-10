@@ -18,53 +18,25 @@
   </head>
   <body>
     <nav class="navbar navbar-light bg-light align-items-center">
-      <img
-        src="{{url_for('static', filename = 'images/logo.png')}}"
-        width="60"
-        height="60"
-        class="d-inline-block align-top"
-        alt=""
-      />
-      <a class="navbar-brand" href="#"> NHL Concussion Analysis </a>
-    </nav>
-
-    <div class="m-2 border border-dark rounded d-flex align-items-center">
-      <img
-        src="{{url_for('static', filename = 'images/team.jpg')}}"
-        class="rounded float-left img-thumbnail p-2 m-2"
-      />
+      <a class="navbar-brand" href="/">
+        <img
+          src="{{url_for('static', filename = 'images/logo.png')}}"
+          width="60"
+          height="60"
+          class="d-inline-block align-top"
+          alt=""
+        />
+      </a>
       <div>
-        <p class="p-3 text-justify font-weight-bold">
-          Concussions are a significant concern in the National Hockey League
-          (NHL), as they can have serious and long-lasting effects on players'
-          health and well-being. The league has implemented various measures to
-          address the issue, including the introduction of a concussion protocol
-          that requires players to undergo a series of tests before being
-          cleared to return to play. Additionally, the NHL has implemented
-          stricter penalties for hits to the head and has increased the use of
-          video review to ensure that dangerous plays are penalized. Despite
-          these efforts, there is still much work to be done to reduce the
-          incidence of concussions in the NHL and to better understand the
-          long-term effects of these injuries on players.
-        </p>
-        <p class="p-3 text-justify font-weight-bold">
-          In our project we develop a Machine Learning models that predict the
-          impact a concussion will have on a players future performance after
-          the concussion
-        </p>
+        <a class="navbar-brand" href="/mlmodel">ML Models</a>
       </div>
-    </div>
-    <div class="d-flex m-2 justify-content-center">
-      <a href={{url_for('analysis')}} class="btn border border-primary bg-primary rounded-3 text-uppercase fs-1 textLink m-1">Analysis</a>
-      <a href={{url_for('ml_model')}} class="btn border border-success bg-success rounded-3 text-uppercase fs-1 textLink m-1">ML models</a>
-    </div>
-<!--
- <div class="analysis">
+    </nav>
+    <div class="analysis">
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-3">
             <form class="">
-              <p>Filter Search</p>
+              <p>Table Filter Search</p>
               <ul class="list-group">
                 <li class="list-group-item d-flex flex-column">
                   <label for="name">Player Name</label>
@@ -78,22 +50,22 @@
                   <label for="team">Team</label>
                   <input type="text" placeholder="Team" id="team" />
                 </li>
-                
+                <!-- 
                   <li class="list-group-item d-flex flex-column">
                     <label for="concussionLength">Concussion Length</label>
                 <input type="text" placeholder="Concussion Length" id="concussionLength" />  
                   </li> 
-              
+                -->
               </ul>
             </form>
           </div>
-          Table 
+          <!-- Table -->
           <div class="col-md-9 scroll">
             <table class="table table-striped">
               <thead>
                 <tr>
-                  <th>index</th>
-                  <th>Pkey</th>
+                  <!--<th>index</th>
+                  <th>Pkey</th> -->
                   <th>Season</th>
                   <th>Player Name</th>
                   <th>Team</th>
@@ -117,30 +89,40 @@
       </div>
     </div>
     <hr />
-    <div class="container-fluid ">
+    <div class="container-fluid">
       <div class="row">
-       
-        <div class="d-flex justify-content-center">
-          <h5>Charts</h5>
-          <div class="m-1">
-          <select id="nameFilter"></select>
-          <select id="seasonFilter"></select>
-          <select id="teamFilter"></select>
-          </div>
-          <div class="container-fluid d-flex flex-column">
-            <div class="row">
-            <div class="border border-dark rounded m-1" id="chart"></div>
-            <div class="border border-dark rounded m-1" id="chart2"></div>
-            <div class="border border-dark rounded m-1" id="chart3"></div>
-            </div>
-          </div>
+        <div class="col-md-3">
+          <form class="">
+            <p>Chart Filter Search</p>
+            <ul class="list-group">
+              <li class="list-group-item d-flex flex-column">
+                <label for="name">Player Name</label>
+                <select
+                  id="name_select"
+                  onchange="optionChanged(this.value)"
+                ></select>
+              </li>
+              <li class="list-group-item d-flex flex-column">
+                <label for="season">Season</label>
+                <select id="season_select"></select>
+              </li>
+              <li class="list-group-item d-flex flex-column">
+                <label for="team">Team</label>
+                <select id="team_select"></select>
+              </li>
+            </ul>
+          </form>
+        </div>
+        <!-- Table -->
+        <div class="col-md-9">
+          <div id="myDiv"></div>
+          <div id="myDiv2"></div>
+          <div id="myDiv3"></div>
+          <div id="myDiv4"></div>
+          <div id="myDiv5"></div>
         </div>
       </div>
     </div>
-  <hr>
-  <h1>machine learning model will be here</h1>
---> 
-   
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
@@ -160,9 +142,9 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+
     <script src="{{url_for('static', filename='js/data.js')}}"></script>
     <script src="{{url_for('static', filename='js/table.js')}}"></script>
     <script src="{{url_for('static', filename='js/chart.js')}}"></script>
-    <script src="{{url_for('static', filename='js/app.js')}}"></script>
   </body>
 </html>
