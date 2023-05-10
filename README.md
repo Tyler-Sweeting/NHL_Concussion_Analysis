@@ -16,16 +16,24 @@ ___
 ### Getting Started
 
 ##### Datasets
-* NHL Concussions Database_data.csv from https://www.kaggle.com/datasets/josephmclauchlan/nhl-concussion-data-2012-2023?resource=download
+* NHL Concussions Database_data.csv from: https://www.kaggle.com/datasets/josephmclauchlan/nhl-concussion-data-2012-2023?resource=download
+    - Removed unwanted columns
+    - Changed format of Names, Teams and Season to match other dataset
+    - Removed goalies
+    - 5 columns, 357 rows after cleaning
 
-* Skaters.csv for 2012-2013 to 2022-2023 from https://moneypuck.com/data.htm
+
+* Skaters.csv for 2012-2013 to 2022-2023 from: https://moneypuck.com/data.htm
+    - Joined datasets from 2012-2022
+    - Removed unwanted columns
+    - Dropped every situation except for 'all'
+    - 13 columns ,9938 rows after cleaning
 
 ##### Dependencies 
 * Python 3.9.15
 * Pandas 1.5.22
 * 
 * 
-*
 ___
 
 ### Summary
@@ -33,7 +41,7 @@ ___
 ##### ERD
 
 ![NHL_Concussion_ERD](https://user-images.githubusercontent.com/118485409/235812652-f1d46e21-f319-4a32-a9ee-493e5f0d869e.png)
-
+Joined all of the skater data from each season onto one dataset, using 'name' as the foreign key. Then we joined the final skater dataset with the concussion dataset on our primary key called pkey. This column was created by joining the player name and season.
 ##### SQL
 
 * SQL Join Code
@@ -44,14 +52,28 @@ ___
 
 ![SQL_output](https://user-images.githubusercontent.com/118485409/235814821-2d349348-a14f-40c2-b1b9-92a9ac901196.png)
 
+The final visual of our joined dataset.
+
+##### Data Exploration
+
+
+##### Machine Learning
+
+
 ##### Tableau
+
 ##### Website
 
 ___
+### Results 
 
+
+___
 ### Authors
 
 ##### Ahmed Hakeem
+- Data Engineer: Front-end Developer; Creation and development of website dashboard.
 ##### Michael Rochon
+- Data Scientist: Managing the database, joining datasets together and Machine Learning.
 ##### Tyler Sweeting
-
+- Data Analyst/Project Coordinator: Data exploration, organizng and coordinating tasks.
