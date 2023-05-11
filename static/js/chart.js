@@ -1,102 +1,90 @@
-var names = data.map((d) => d.name);
-var seasons = data.map((d) => d.season);
-var teams = data.map((d) => d.team);
-var position = data.map((d) => d.position);
-var gamesPlayed = data.map((d) => d.games_played);
-var goals = data.map((d) => d.i_f_goals);
-var points = data.map((d) => d.i_f_points);
-var penalityMinutes = data.map((d) => d.i_f_penalityminutes);
-var hits = data.map((d) => d.i_f_hits);
-var takeaWays = data.map((d) => d.i_f_takeaways);
-var giveaWays = data.map((d) => d.i_f_giveaways);
-var oniceCorsiPercentage = data.map((d) => d.onice_corsipercentage);
-var oniceFenwickPercentage = data.map((d) => d.onice_fenwickpercentage);
-var gamesMissed = data.map((d) => d.games_missed);
 
-var selector = d3.select("#name_select");
-names.forEach((name) => {
-  selector.append("option").text(name).property("value", name);
-});
-var selector = d3.select("#season_select");
-seasons.forEach((season) => {
-  selector.append("option").text(season).property("value", season);
-});
-var selector = d3.select("#team_select");
-teams.forEach((team) => {
-  selector.append("option").text(team).property("value", team);
+// Get the unique values for each filter option
+var uniqueNames = [...new Set(data.map((d) => d.name))];
+var uniqueSeasons = [...new Set(data.map((d) => d.season))];
+
+// Populate the select dropdown options with the unique values
+var nameSelector = d3.select("#name_select");
+uniqueNames.forEach((name) => {
+  nameSelector.append("option").text(name).property("value", name);
 });
 
-var data = [
+var seasonSelector = d3.select("#season_select");
+uniqueSeasons.forEach((season) => {
+  seasonSelector.append("option").text(season).property("value", season);
+});
+
+// Set up the initial data and plots
+var filteredData = data;
+var xValues = filteredData.map((d) => d.name);
+var yValues = filteredData.map((d) => d.points_per_game);
+
+var barData = [
   {
-    x: names,
-    y: points,
-    type: 'bar'
-  }
+    x: xValues,
+    y: yValues,
+    type: "bar",
+  },
 ];
 
-Plotly.newPlot('myDiv', data);
-
+Plotly.newPlot("myDiv", barData);
 
 var trace1 = {
-  x: names,
-  y: gamesPlayed,
-  mode: 'markers',
-  type: 'scatter'
+  x: xValues,
+  y: filteredData.map((d) => d.games_played),
+  mode: "markers",
+  type: "scatter",
 };
 
 var trace2 = {
-  x: names,
-  y: gamesMissed,
-  mode: 'markers',
-  type: 'scatter'
+  x: xValues,
+  y: filteredData.map((d) => d.games_missed),
+  mode: "markers",
+  type: "scatter",
 };
 
 var trace3 = {
-  x: names ,
-  y: goals,
-  mode: 'markers',
-  type: 'scatter'
+  x: xValues,
+  y: filteredData.map((d) => d.points_per_game),
+  mode: "markers",
+  type: "scatter",
 };
 
-var data = [trace1, trace2, trace3];
+var sctterData = [trace1, trace2, trace3];
 
-Plotly.newPlot('myDiv2', data);
+Plotly.newPlot("myDiv2", sctterData);
 
+// Filter the data based on the selected values and update the plots
+function updatePlots() {
+  var selectedName = nameSelector.property("value");
+  var selectedSeason = seasonSelector.property("value");
 
-var x = seasons
+  filteredData = data.filter((d) => {
+    return (
+      (selectedName === "All" || d.name === selectedName) ||
+      (selectedSeason === "All" || d.season === selectedSeason) 
+    );
+  });
 
-var trace4 = {
-  y: gamesPlayed,
-  x: x,
-  name: 'games Played',
-  marker: {color: '#3D9970'},
-  type: 'box'
-};
+  xValues = filteredData.map((d) => d.name);
+  
+  // Update the data for the first plot
+  Plotly.update("myDiv", {
+    x: [xValues],
+    y: [filteredData.map((d) => d.points_per_game)],
+  });
 
-var trace5 = {
-  y: gamesMissed,
-  x: x,
-  name: 'games Missed',
-  marker: {color: '#FF4136'},
-  type: 'box'
-};
+  // Update the data for the second plot
+  Plotly.update("myDiv2", {
+    x: [xValues, xValues, xValues],
+    y: [
+      filteredData.map((d) => d.goals),
+      filteredData.map((d) => d.games_missed),
+      filteredData.map((d) => d.points_per_game),
+    ],
+  });
+}
 
-var trace6 = {
-  y: points,
-  x: x,
-  name: 'points',
-  marker: {color: '#FF851B'},
-  type: 'box'
-};
-
-var data = [trace4, trace5, trace6];
-
-var layout = {
-  yaxis: {
-    title: '',
-    zeroline: false
-  },
-  boxmode: 'group'
-};
-
-Plotly.newPlot('myDiv3', data, layout);
+// Add an event listener to the filter options to update the plots when they are changed
+nameSelector.on("change", updatePlots);
+seasonSelector.on("change", updatePlots);
