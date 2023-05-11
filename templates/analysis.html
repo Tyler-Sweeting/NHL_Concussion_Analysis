@@ -46,16 +46,6 @@
                   <label for="season">Season</label>
                   <input type="text" placeholder="Season" id="season" />
                 </li>
-                <li class="list-group-item d-flex flex-column">
-                  <label for="team">Team</label>
-                  <input type="text" placeholder="Team" id="team" />
-                </li>
-                <!-- 
-                  <li class="list-group-item d-flex flex-column">
-                    <label for="concussionLength">Concussion Length</label>
-                <input type="text" placeholder="Concussion Length" id="concussionLength" />  
-                  </li> 
-                -->
               </ul>
             </form>
           </div>
@@ -64,22 +54,21 @@
             <table class="table table-striped">
               <thead>
                 <tr>
-                  <!--<th>index</th>
-                  <th>Pkey</th> -->
                   <th>Season</th>
                   <th>Player Name</th>
                   <th>Team</th>
                   <th>Position</th>
                   <th>Games Played</th>
-                  <th>i_f_goals</th>
-                  <th>i_f_points</th>
-                  <th>i_f_penalityminutes</th>
-                  <th>i_f_hits</th>
-                  <th>i_f_takeaways</th>
-                  <th>i_f_giveaways</th>
-                  <th>onice_corsipercentage</th>
-                  <th>onice_fenwickpercentage</th>
-                  <th>games_missed</th>
+                  <th>Corsi Percentage</th>
+                  <th>Fenwick Percentage</th>
+                  <th>Goals</th>
+                  <th>Points</th>
+                  <th>Penalty Minutes</th>
+                  <th>Hits</th>
+                  <th>Takeaways</th>
+                  <th>Giveaways</th>
+                  <th>Games Missed</th>
+                  <th>Points Per Game</th>
                 </tr>
               </thead>
               <tbody></tbody>
@@ -99,27 +88,23 @@
                 <label for="name">Player Name</label>
                 <select
                   id="name_select"
-                  onchange="optionChanged(this.value)"
-                ></select>
+                  onchange="updatePlots()"
+                >
+              <option value="all">All</option></select>
               </li>
               <li class="list-group-item d-flex flex-column">
                 <label for="season">Season</label>
-                <select id="season_select"></select>
-              </li>
-              <li class="list-group-item d-flex flex-column">
-                <label for="team">Team</label>
-                <select id="team_select"></select>
+                <select id="season_select" onchange="updatePlots()">
+                  <option value="all">All</option>
+                </select>
               </li>
             </ul>
           </form>
         </div>
-        <!-- Table -->
-        <div class="col-md-9">
+        <!-- Chart -->
+        <div class="col-md-9 d-flex flex-column">
           <div id="myDiv"></div>
-          <div id="myDiv2"></div>
-          <div id="myDiv3"></div>
-          <div id="myDiv4"></div>
-          <div id="myDiv5"></div>
+          <div class="m-1" id="myDiv2"></div>
         </div>
       </div>
     </div>

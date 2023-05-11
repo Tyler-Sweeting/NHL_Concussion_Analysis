@@ -25,7 +25,10 @@
         class="d-inline-block align-top"
         alt=""
       />
-      <a class="navbar-brand" href="#"> NHL Concussion Analysis </a>
+      <div>
+      <a class="m-1 textLink" href={{url_for('analysis')}} >Analysis</a>
+      <a class="m-1 textLink" href={{url_for('ml_model')}} >ML models</a>
+      </div>
     </nav>
 
     <div class="m-2 border border-dark rounded d-flex align-items-center">
@@ -55,91 +58,9 @@
       </div>
     </div>
     <div class="d-flex m-2 justify-content-center">
-      <a href={{url_for('analysis')}} class="btn border border-primary bg-primary rounded-3 text-uppercase fs-1 textLink m-1">Analysis</a>
-      <a href={{url_for('ml_model')}} class="btn border border-success bg-success rounded-3 text-uppercase fs-1 textLink m-1">ML models</a>
+      
     </div>
-<!--
- <div class="analysis">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-3">
-            <form class="">
-              <p>Filter Search</p>
-              <ul class="list-group">
-                <li class="list-group-item d-flex flex-column">
-                  <label for="name">Player Name</label>
-                  <input type="text" placeholder="Player Name" id="name" />
-                </li>
-                <li class="list-group-item d-flex flex-column">
-                  <label for="season">Season</label>
-                  <input type="text" placeholder="Season" id="season" />
-                </li>
-                <li class="list-group-item d-flex flex-column">
-                  <label for="team">Team</label>
-                  <input type="text" placeholder="Team" id="team" />
-                </li>
-                
-                  <li class="list-group-item d-flex flex-column">
-                    <label for="concussionLength">Concussion Length</label>
-                <input type="text" placeholder="Concussion Length" id="concussionLength" />  
-                  </li> 
-              
-              </ul>
-            </form>
-          </div>
-          Table 
-          <div class="col-md-9 scroll">
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th>index</th>
-                  <th>Pkey</th>
-                  <th>Season</th>
-                  <th>Player Name</th>
-                  <th>Team</th>
-                  <th>Position</th>
-                  <th>Games Played</th>
-                  <th>i_f_goals</th>
-                  <th>i_f_points</th>
-                  <th>i_f_penalityminutes</th>
-                  <th>i_f_hits</th>
-                  <th>i_f_takeaways</th>
-                  <th>i_f_giveaways</th>
-                  <th>onice_corsipercentage</th>
-                  <th>onice_fenwickpercentage</th>
-                  <th>games_missed</th>
-                </tr>
-              </thead>
-              <tbody></tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
-    <hr />
-    <div class="container-fluid ">
-      <div class="row">
-       
-        <div class="d-flex justify-content-center">
-          <h5>Charts</h5>
-          <div class="m-1">
-          <select id="nameFilter"></select>
-          <select id="seasonFilter"></select>
-          <select id="teamFilter"></select>
-          </div>
-          <div class="container-fluid d-flex flex-column">
-            <div class="row">
-            <div class="border border-dark rounded m-1" id="chart"></div>
-            <div class="border border-dark rounded m-1" id="chart2"></div>
-            <div class="border border-dark rounded m-1" id="chart3"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  <hr>
-  <h1>machine learning model will be here</h1>
---> 
+
    
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://d3js.org/d3.v7.min.js"></script>
@@ -163,6 +84,5 @@
     <script src="{{url_for('static', filename='js/data.js')}}"></script>
     <script src="{{url_for('static', filename='js/table.js')}}"></script>
     <script src="{{url_for('static', filename='js/chart.js')}}"></script>
-    <script src="{{url_for('static', filename='js/app.js')}}"></script>
   </body>
 </html>
