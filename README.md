@@ -16,14 +16,14 @@ ___
 ### Getting Started
 
 ##### Datasets
-* NHL Concussions Database_data.csv from: https://www.kaggle.com/datasets/josephmclauchlan/nhl-concussion-data-2012-2023?resource=download
+* NHL Concussions Database_data.csv from: [This link](https://www.kaggle.com/datasets/josephmclauchlan/nhl-concussion-data-2012-2023?resource=download)
     - Removed unwanted columns
     - Changed format of Names, Teams and Season to match other dataset
     - Removed goalies
     - 5 columns by 357 rows after cleaning
 
 
-* Skaters.csv for 2012-2013 to 2022-2023 from: https://moneypuck.com/data.htm
+* Skaters.csv for 2012-2013 to 2022-2023 from: [This link](https://moneypuck.com/data.htm)
     - Joined datasets from 2012-2022
     - Removed unwanted columns
     - Dropped every situation except for 'all'
@@ -75,8 +75,8 @@ For data exploration, our goal was to find some details in our data that would h
 Working On
 
 ##### Tableau
-We used Tableau as a form of data exploration, and to create some visuals of findings we made. The Tableau dashboard is available at this link.
-https://public.tableau.com/app/profile/tyler.sweeting4938/viz/NHL_Concussion_Analysis/NHLStoryAnalysis?publish=yes
+We used Tableau as a form of data exploration, and to create some visuals of findings we made. The Tableau dashboard is available at this
+[link](https://public.tableau.com/app/profile/tyler.sweeting4938/viz/NHL_Concussion_Analysis/NHLStoryAnalysis?publish=yes).
 
 This first image is a collection of multiple bar charts that compares points per game by each season. It also identifies each season a player had a concussion or not, and the amount of games they played that season. As the visual shows, there is no consistency in a concussion leading to a reduced amount of points per game in seasons following a concussion.
 
@@ -116,7 +116,7 @@ ___
 To be filled in for Deliverable 3.
 
 ##### Slideshow
-https://docs.google.com/presentation/d/1890SfoJNAox-6K8u-hvgCQe1gRSIRcmOk8xXY5-6Qu8/edit#slide=id.p
+[Link to slideshow](https://docs.google.com/presentation/d/1890SfoJNAox-6K8u-hvgCQe1gRSIRcmOk8xXY5-6Qu8/edit#slide=id.p).
 
 ___
 ### Authors
