@@ -72,22 +72,40 @@ For data exploration, our goal was to find some details in our data that would h
 
 ##### Machine Learning Model
 
+Working On
 
 ##### Tableau
 We used Tableau as a form of data exploration, and to create some visuals of findings we made. The Tableau dashboard is available at this link.
 
 This first image is a collection of multiple bar charts that compares points per game by each season. It also identifies each season a player had a concussion or not, and the amount of games they played that season. As the visual shows, there is no consistency in a concussion leading to a reduced amount of points per game in seasons following a concussion.
 
+<img width="815" alt="PPgbySeasonbyConcussed" src="https://github.com/Tyler-Sweeting/NHL_Concussion_Analysis/assets/118485409/11652818-299d-46ee-81ce-0b26a72496a3">
+
 
 The next visual is a collection of bar charts that show a players fenwick percentage seasn by season and identifying the year they were concussed. Fenwick percentage is a stat that shows the percentage of scoring chances a team gets while a specific player is on the ice. The higher the number the better. As you can see from the visual, the year a player is concussed does not seem to have a lasting effect on a player's fenwick.
 
+<img width="820" alt="Fenwick%bySeasonbyConcussed" src="https://github.com/Tyler-Sweeting/NHL_Concussion_Analysis/assets/118485409/f3b42d33-f3fa-4d23-bef2-9c8a5095b845">
+
 ##### Website
-Our website is the main dashboard for our analysis. We have a home page, and two secondary pages. The first page being a filter page that shows the history of concussions on NHL player's since 2012. There are multiple ways that you can filter. 
-You can search a player's name
+Our website is the main dashboard for our analysis.
 
-You can filter by season.
+![WebsiteHomePage](https://github.com/Tyler-Sweeting/NHL_Concussion_Analysis/assets/118485409/074ea83c-3210-40b6-bd85-f0881238d15d)
 
-You can filter by player
+We have a home page, and two secondary pages. The first page being a filter page that shows the history of concussions on NHL player's since 2012. There are multiple ways that you can filter. 
+
+![Filter_page](https://github.com/Tyler-Sweeting/NHL_Concussion_Analysis/assets/118485409/5c7fbe69-14ad-451e-b29e-38984f37192c)
+
+You can search a player's name:
+
+![SearchName](https://github.com/Tyler-Sweeting/NHL_Concussion_Analysis/assets/118485409/0f6fd592-0c64-413f-a814-173dfeea6b81)
+
+You can filter by season:
+
+![filteredBySeason](https://github.com/Tyler-Sweeting/NHL_Concussion_Analysis/assets/118485409/441792c3-7858-41b1-b260-0ae42949cfe8)
+
+You can filter by player:
+
+![FilterByName](https://github.com/Tyler-Sweeting/NHL_Concussion_Analysis/assets/118485409/1592bbc2-2b4e-49ea-8d37-202a5551bb2e)
 
 
  The second page is a connection to our machine learning model that can be used to predict the effects a concussion will have on a player. 
@@ -95,6 +113,9 @@ ___
 ### Results 
 
 To be filled in for Deliverable 3.
+
+##### Slideshow
+https://docs.google.com/presentation/d/1890SfoJNAox-6K8u-hvgCQe1gRSIRcmOk8xXY5-6Qu8/edit#slide=id.p
 
 ___
 ### Authors
