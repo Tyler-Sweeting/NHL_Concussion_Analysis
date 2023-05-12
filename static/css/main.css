@@ -28,3 +28,7 @@ p {
   color: black;
   direction: none;
 }
+
+.teamImg { 
+  height: 750px;
+}

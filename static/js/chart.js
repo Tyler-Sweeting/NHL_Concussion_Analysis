@@ -32,6 +32,7 @@ Plotly.newPlot("myDiv", barData);
 var trace1 = {
   x: xValues,
   y: filteredData.map((d) => d.games_played),
+  name: "Game Played",
   mode: "markers",
   type: "scatter",
 };
@@ -39,13 +40,15 @@ var trace1 = {
 var trace2 = {
   x: xValues,
   y: filteredData.map((d) => d.games_missed),
+  name: "Game Missed",
   mode: "markers",
   type: "scatter",
 };
 
 var trace3 = {
-  x: xValues,
+  x: filteredData.map((d) => d.season),
   y: filteredData.map((d) => d.points_per_game),
+  name: "Points Per Game",
   mode: "markers",
   type: "scatter",
 };
@@ -78,7 +81,7 @@ function updatePlots() {
   Plotly.update("myDiv2", {
     x: [xValues, xValues, xValues],
     y: [
-      filteredData.map((d) => d.goals),
+      filteredData.map((d) => d.games_played),
       filteredData.map((d) => d.games_missed),
       filteredData.map((d) => d.points_per_game),
     ],
