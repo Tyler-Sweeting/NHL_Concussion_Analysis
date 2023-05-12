@@ -110,6 +110,39 @@ You can filter by player:
 
 
  The second page is a connection to our machine learning model that can be used to predict the effects a concussion will have on a player. 
+
+### Machine Learning
+We chose our machine learning models with the intention of allowing for a user to estimate with some degree of certainty the number of Points/Game a player would likely score in a seaason if they suffered a major concussion (defined by missing more than 10 games) the year prior. With this in mind we first chose a basic linear regression model to see how well our data points of players with major concussions fit a predictive model.
+
+## Linear Regression Model
+With the data fit into a scatter plot we can immediately see that the less severe of the major concussion (<20 missed) allowed the players to return the next season with a high rate of points scored per game. However, when we look at the major concussions it becomes immediately obvious that the injury has impaired their abilities. There are of course outliers on both sides of the set with two players having impressive years after a season with a significant concussion, as well as other players with less severe concussions having what would be considered off years.
+
+![LR_Scatter](Images/LR_scatter.png)
+
+When we fit the line of best fit to this data it becomes clear immediately that the significant grouping of concussions under 20 games will make this model not accurate for prediction.
+
+![LR_lobf](Images/LR_lobf.png)
+
+## Easy Ensemble AdaBoost Classifier
+Using an Easy Ensemble AdaBoost Classifier allowed us the ability to classify the data that we were inputing into the model with a high degree of precision and accuracy.
+
+![AdaBoost](Images/AdaBoost.png)
+
+As you can see by the confusion matrix the precision of the model only returned one instance of false prediction, and the balanced accuracy score showed results of 95.83%. These results showed the most promise for further use as machine learning models.
+
+## Other Supervised Machine Learning Models
+The Balanced Random Forest Classifier model was also attempted, however it resulted in similar, yet worse results to the AdaBoost Classifier.
+
+## Unsupervised Machine Learning
+We also made an attempt at fitting an unsupervised model in the for of the PCA model. And while the results were interesting and highly interactive, the data clusters were ultimately decided to be of less use than the supervised machine learning models.
+
+![PCA Elbow](Images/PCA_elbowcurve.png)
+
+As you can see with the elbow curve it is difficult to tell exactly where the curve becomes primarily horizontal. A K value of 4, and 6 were attempted but unfortunately deriving data from those clustered proved fruitless.
+
+![PCA 3DCluster](Images/PCA_3DScatter.png)
+
+The large portion of the data is centered around 0 on all three axes. However, you can see even in this data that the two outliers observed with major concussion and high Points/Game in the next season are clearly visible in the top left corner.
 ___
 ### Results 
 
