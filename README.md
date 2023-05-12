@@ -76,6 +76,7 @@ Working On
 
 ##### Tableau
 We used Tableau as a form of data exploration, and to create some visuals of findings we made. The Tableau dashboard is available at this link.
+https://public.tableau.com/app/profile/tyler.sweeting4938/viz/NHL_Concussion_Analysis/NHLStoryAnalysis?publish=yes
 
 This first image is a collection of multiple bar charts that compares points per game by each season. It also identifies each season a player had a concussion or not, and the amount of games they played that season. As the visual shows, there is no consistency in a concussion leading to a reduced amount of points per game in seasons following a concussion.
 
