@@ -1,14 +1,13 @@
 # Import libraries
-from flask import Flask, render_template, json
-import os
+import numpy as np
+from flask import Flask, render_template, request
+import pickle
 
 
 app = Flask(__name__)
+model = pickle.load(open('model.pkl', 'rb'))
 
 
-# filepath = os.path.join("static", "js/data.json")
-# with open(filepath) as jsonfile:
-#     chartdata = json.load(jsonfile)
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -21,7 +20,15 @@ def analysis():
 
 @app.route('/mlmodel')
 def ml_model():
-    return render_template('mlmodel.html')
+    
+    int_features = [int(x) for x in request.form.values()]
+    final_features = [np.array(int_features)]
+    prediction = model.predict(final_features)
+
+    output = round(prediction.reshape(1,-1))
+
+
+    return render_template('mlmodel.html',   prediction_text = output)
 
 
 if __name__ == '__main__':
