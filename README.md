@@ -70,10 +70,6 @@ The final visual of our joined dataset.
 For data exploration, our goal was to find some details in our data that would help us build our machine learning model that could answer our original question of, does a concussion have any long-term effects on a player's career? To begin exploring this question, we first need to gather and clean the relevant data. This includes data on players who have suffered concussions, as well as data on their performance before and after the concussion. Once we have this data, we can start exploring it to identify any patterns or trends that may indicate a long-term impact on a player's career. This could involve examining the number of games missed due to concussion, changes in performance metrics such as points per game, or other relevant factors. By exploring the data, we hope to gain a deeper understanding of the effects of concussions on NHL players.
 
 
-##### Machine Learning Model
-
-Working On
-
 ##### Tableau
 We used Tableau as a form of data exploration, and to create some visuals of findings we made. The Tableau dashboard is available at this
 [link](https://public.tableau.com/app/profile/tyler.sweeting4938/viz/NHL_Concussion_Analysis/NHLStoryAnalysis?publish=yes).
