@@ -41,11 +41,7 @@ ___
     - 17 columns by 15 rows
 
 
-##### Dependencies 
-* Python 3.9.15
-* Pandas 1.5.22
-* 
-* 
+
 ___
 
 ### Summary
@@ -142,7 +138,13 @@ The large portion of the data is centered around 0 on all three axes. However, y
 ___
 ### Results 
 
-To be filled in for Deliverable 3.
+Our analysis was focused on understanding the impact of concussions on player performance in the NHL. Initially, we had assumed that players who suffered from a serious concussion would experience a decline in their performance when returning to play. However, after conducting a detailed data exploration, we found no consistent evidence to support this assumption. We analyzed players' points per game and their fenwick percentage during the season after they missed over 10 games due to a concussion, and found no significant drop-off in performance. While some players did choose to retire due to the effects of their concussions, those who returned to play did not appear to be impacted in any significant way.
+
+One possible explanation for these findings is that advances in medical technology and concussion management have helped players recover more quickly and effectively from these injuries. Over the years there has been increased awareness of the long-term impact of concussions, leading to improvements in protocols for detecting and responding to them. As a result, players are now more likely to receive appropriate medical attention and treatment in the immediate aftermath of a concussion, which may help to minimize any long-term effects.
+
+If this analysis was done a decade ago, I am sure our results would have shown more of a drop-off in a player's production when returning from a concussion. The attention that concussions have been receiving in the NHL seems to be having a positive impact on a player's recovery and hopefully continue to go in the same direction as time goes on. Hopefully one day it gets to a point where a concussion will never force a player to retire, and there will be no fear of potential health concerns later on in life.
+
+If we were to do further analysis on this project, there are a few things that could be done next. We could try to find some datasets from further back in time to compare the impact concussions had back then to the impact they have now. For our machine learning model we needed to create two additional columns of data, being points-per-game in the previous season and in the following season of a concussion. When adding this to the points per game of the season of the concussion that makes for 3 columns. It could be reduced to 2 columns by changing it to difference between previous season and current season, as well as difference between following season and current season. 
 
 ##### Slideshow
 [Link to slideshow](https://docs.google.com/presentation/d/1890SfoJNAox-6K8u-hvgCQe1gRSIRcmOk8xXY5-6Qu8/edit#slide=id.p).
