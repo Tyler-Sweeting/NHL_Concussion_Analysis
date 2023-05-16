@@ -41,11 +41,7 @@ ___
     - 17 columns by 15 rows
 
 
-##### Dependencies 
-* Python 3.9.15
-* Pandas 1.5.22
-* 
-* 
+
 ___
 
 ### Summary
