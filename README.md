@@ -150,7 +150,7 @@ If we were to do further analysis on this project, there are a few things that c
 [Link to slideshow](https://docs.google.com/presentation/d/1890SfoJNAox-6K8u-hvgCQe1gRSIRcmOk8xXY5-6Qu8/edit#slide=id.p).
 
 ##### Presentation Rehearsal
-Link Here
+[Link to rehearsal](https://drive.google.com/file/d/17tEy9GWigs7yTc-6MRw92oE45ST2mH2U/view?usp=sharing).
 
 ___
 ### Authors
