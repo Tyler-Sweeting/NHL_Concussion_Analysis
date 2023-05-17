@@ -149,6 +149,9 @@ If we were to do further analysis on this project, there are a few things that c
 ##### Slideshow
 [Link to slideshow](https://docs.google.com/presentation/d/1890SfoJNAox-6K8u-hvgCQe1gRSIRcmOk8xXY5-6Qu8/edit#slide=id.p).
 
+##### Presentation Rehearsal
+Link Here
+
 ___
 ### Authors
 
