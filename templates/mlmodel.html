@@ -31,14 +31,31 @@
       <a class="navbar-brand" href="/analysis">Analysis</a>
       </div>
     </nav>
-  <h1>machine learning model will be here</h1>
-<form action = "{{ url_for("ml_model")  }}" method="post" >
-  <input type="number" name="missed_games" required="required" />
-  <button type="submit" class="btn">Predict</button>
+    <div class="p-2">
+  <div class="d-flex justify-content-center p-4">
+  <h1>Machine Learning Model</h1>
+  </div>
+  <div class="border border-dark d-flex justify-content-center
+   rounded m-10 p-2 w-10 h-10 ">
+<form action = "{{ url_for("ml_model")  }}" method="post">
+  <div class="d-flex justify-content-center p-3">
+  <input type="number" name="Season" required="required" placeholder="Season" class="p-2 m-2" />
+  <input type="number" name="gmaes_played" required="required" placeholder="Gmaes Played" class="p-2 m-2" />
+  <input type="number" name="missed_games" required="required" placeholder="Gmaes Missed" class="p-2 m-2" />
+  </div>
+  <div class="d-flex justify-content-center ">
+  <button type="submit" class="btn btn-outline-secondary btn-lg">Predict</button>
+  </div>
 </form>
+</div>
+</div>
+
+<div class="d-flex justify-content-center">
+  <img src="{{url_for('static', filename = 'images/im.png')}}" />
+</div>
 
 
-  <h2> {{ prediction_text }} </h2>
+ <!--   <h2> {{ prediction_text }} </h2> -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
