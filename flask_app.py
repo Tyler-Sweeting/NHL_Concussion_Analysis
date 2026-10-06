@@ -2,6 +2,9 @@
 import numpy as np
 from flask import Flask, render_template, request
 import pickle
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # data = input of the user form
 app = Flask(__name__)

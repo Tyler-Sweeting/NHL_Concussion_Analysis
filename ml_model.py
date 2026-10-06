@@ -32,20 +32,6 @@ def train_rf(X_train, X_test, y_train, y_test, element):
           (accuracy_score(predictions, y_test)*100))
     return (model_rf)
 
-
-# Trainnig a random forest algorithm
-def train_rf(X_train, X_test, y_train, y_test, element):
-    # Initialize model
-    rf = RandomForestClassifier(n_estimators=1000, random_state=42)
-    # Train the model on training data
-    model_rf = rf.fit(X_train, y_train)
-    print(element + " Model Training Ready")
-    # Use the forest's predict method on the test data
-    predictions = rf.predict(X_test)
-    print(element + ' Accuracy Condition: %.2f%%' %
-          (accuracy_score(predictions, y_test)*100))
-    return (model_rf)
-
 # Save model as objects
 def save_model_object(model_object, model_name, model_params):
     file_name = model_name+"_"+str(model_params).replace(
